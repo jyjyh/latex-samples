@@ -1,0 +1,112 @@
+% -*- coding: utf-8 -*-
+% !TEX compiler =  LuaLaTeX
+
+\documentclass[oneside,10pt]{book}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={180mm,257mm},
+ left= 7mm,
+ top= 15mm,
+ }
+ 
+% packages for font
+\usepackage{fontspec}
+\setmainfont{UniversLTStd}
+
+
+% packages for table
+\usepackage{tabularray}
+\usepackage{array,multirow,amsmath}
+
+% packages for color
+\usepackage{xcolor}
+\definecolor{Blue}{RGB}{0,150,233}
+\definecolor{blue}{RGB}{102,192,236}
+\definecolor{orange}{RGB}{238,117, 42}
+
+\usepackage{hyperref}
+\usepackage{enumitem}
+%%%%%%%%%%%%%%%
+
+\begin{document}
+\setcounter{page}{60}
+\begin{Large}
+\textbf{Siedlungsabfälle aus Gemeindesammlungen$^{1}$ 1985–2020}
+\end{Large} \\
+
+\begin{tblr}{colspec={|[0pt, white] X [-1, c, blue] | [2pt, white] X [-1, r] | [2pt, white] X [-1, r] |[2pt, white] X [-1, r] | [2pt, white] X [1.5,r] |[2pt, white] X [1.5,r] | [2pt, white] X [1.5, r] |[2pt, white] X [1.5, r] | [2pt, white] X [1.5, r] |[2pt, white] },
+rowspec={|[2pt,white] Q [Blue] | [2pt, white] Q [Blue] |  [2pt, white] Q | [2pt, blue] Q|  [2pt, blue] Q|  [2pt, blue] Q| [2pt, blue] Q| [2pt, blue] Q| [2pt, blue] Q| [2pt, blue] Q| [2pt, blue] Q| [2pt, blue] Q| [2pt, blue] Q| [2pt, blue] Q| [2pt, blue] Q|  [7pt, orange]}}
+ \SetCell[r=2]{c} {\textcolor{white}{Jahr}} &
+ \SetCell[r=2]{c} {\textcolor{white}{Glas, \\ in Tonnen}} &
+\SetCell[r=2]{c} \textcolor{white}{Papier/ \\ Karton, \\ in Tonnen} &
+\SetCell[r=2]{c}  \textcolor{white}{Altmetall, \\ in Tonnen} &
+\SetCell[r=2]{c}  \textcolor{white}{{Kompos- \\ tier- und \\ vergärbare \\ Abfälle, in \\Tonnen}}& 
+\SetCell[c=2]{c}  \textcolor{white}{Separatsammlungen$^{2}$} & &
+\SetCell[c=2]{c} \textcolor{white} {Hauskehricht und Sperrgut} & \\
+
+& & & & & \textcolor{white}{Total, \\ in Tonnen} & \textcolor{white}{in Kilogramm \\ pro Einw.}  
+& \textcolor{white}{Total, \\ in Tonnen} & \textcolor{white}{in Kilogramm \\ pro Einw.}    \\
+
+1985 &	8 310 & 13 500	& 2 500 &	850 & 25 160 &	53  &	146 467	  &	311 \\
+
+1990	& 11 990	& 28 140	& 4 650 & 32 870 &	77 650 &	154  & 116 562	& 231 \\
+
+1995 & 14 781 & 35 044 & 7 297 & 45 439 & 102 561 & 192 & 94 433 & 178 \\ 
+
+1995 & 14 781 & 35 044 & 7 297 & 45 439 & 102 561 & 192 & 94 433 & 178\\
+
+2000 & 16 356 & 42 597 & 6 348 & 54 981 & 120 282 & 219 & 96 053 & 175\\
+
+2005 & 18 159 & 44 550 & 5 393 & 63 741 & 131 843 & 230 & 102 530 & 179\\
+
+2010 & 20 158 & 44 727 & 4 676 & 68 653 & 138 214 & 224 & 108 722 & 176\\
+
+2015 & 18 159 & 35 875 & 4 166 & 71 999 & 130 199 & 199 & 110 519 & 169\\
+
+2016 & 17 566 & 33 822 & 3 784 & 81 463 & 136 635 & 206 & 110 753 & 167\\
+
+2017 & 17 023 & 31 570 & 3 840 & 75 348 & 127 780 & 191 & 109 950 & 164\\
+
+2018 & 16 900 & 28 664 & 3 650 & 75 018 & 124 232 & 183 & 111 040 & 164\\
+
+2019 & 17 425 & 26 455 & 3 435 & 77 908 & 125 222 & 183 & 107 001 & 156\\
+
+2020 & 18 135 & 23 800 & 3 528 & 81 134 & 126 598 & 182 & 110 287 & 159\\
+\end{tblr}
+
+  \begin{enumerate}[noitemsep]
+  \item Quelle: Kanton Aargau; Abteilung für Umwelt 
+  \item Aus kommunalen Sammlungen/Sammelstellen, ohne Mengen aus privaten Recyclinghöfen
+  \end{enumerate}
+
+
+
+
+\newpage
+\begin{Large}
+\textbf{Beherbergungsstatistik$^{1,2}$: Angebot und Nachfrage, 2005–2020}
+\end{Large} \\
+
+
+
+\begin{tblr}{colspec={|[0pt, white] X [-1, c, blue] | [2pt, white] X [c] | [2pt, white] X [r] |[2pt, white] X [r] | [2pt, white] X [r] |[2pt, white] X [ r] | [2pt, white] X [r] |[2pt, white] X [r] | [2pt, white] X [r] |[2pt, white] }, rowspec={|[2pt,white] Q [Blue] | [2pt, white] Q [Blue] |  [2pt, white] Q | [2pt, blue] Q|  [2pt, blue] Q|   [7pt, orange]}}
+ \SetCell[r=2]{c} {\textcolor{white}{Jahr}} &
+ \SetCell[r=1, c=2]{c} {\textcolor{white}{Geöffnete Betriebe}} & &
+\SetCell[r=1, c=3]{c} \textcolor{white}{Ankünfte} & & &
+\SetCell[r=1, c=3]{c}  \textcolor{white}{Logiernächte} \\
+& \textcolor{white}{Anzahl} & \textcolor{white}{verfügbare \\ Gastbetten}	 & \textcolor{white}{Total} & \textcolor{white}{aus dem \\Inland} &\textcolor{white} {aus dem \\Ausland} & \textcolor{white}{Total} & \textcolor{white}{aus dem \\Inland} &\textcolor{white} {aus dem \\Ausland}\\
+
+2005 & 163  & 5 062 &  254 839 &  144 604&  110 235 & 598 870 &  313 087 &  285 783  \\				
+2010	& 165	& 5 262 & 	302 654	& 166 324 &	136 330	& 686 188 &	358 808	& 327 380 \\
+2011 & 165 & 5 319 & 307 909 & 169 637 & 138 272 & 697 095 & 359 014 & 338 081 \\
+
+
+\end{tblr}
+
+
+  \begin{enumerate}[noitemsep]
+\item Quelle: Beherbergungsstatistik (HESTA); Bundesamt für Statistik (BFS)
+\item Hotels, Kurbetriebe
+\end{enumerate}
+\end{document}
